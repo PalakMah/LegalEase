@@ -17,29 +17,13 @@ LegalEase helps users by:
 - Providing AI-powered legal assistance
 - Improving accessibility and understanding
 
-## 📚 Table of Contents
-
-- About LegalEase
-- Live Demo
-- Features
-- Screenshots
-- Technology Stack
-- Project Structure
-- Installation
-- Usage
-- Testing
-- Configuration
-- [Tailwind Theme Guide](docs/tailwind-theme-guide.md)
-- Security
-- Contributing
-- Code of Conduct
-- Future Enhancements
-- License
-
 # LegalEase Website
 
 A comprehensive legal document analysis platform that combines AI-powered document processing, chatbot assistance, and user-friendly interfaces.
 
+## System Architecture
+
+![LegalEase System Architecture](assets/architecture.png)
 
 
 
