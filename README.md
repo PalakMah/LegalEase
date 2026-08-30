@@ -1,8 +1,5 @@
 # ⚖️ LegalEase
 
-<p align="center">
-  <img src="assets/homepage.png" alt="LegalEase Banner" width="800"/>
-</p>
 
 <p align="center">
   AI-powered legal document analysis platform that simplifies complex legal documents, provides intelligent summaries, and offers chatbot-based assistance.
