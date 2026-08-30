@@ -219,16 +219,6 @@ $$\text{Grade Level} = 0.39 \left( \frac{\text{Total Words}}{\text{Total Sentenc
 ### Feature Overview
 Allow users to select a legal jurisdiction (e.g., California, New York, Delaware, India, UK, EU) in the chatbot page and ensure every chatbot response is analyzed under the selected jurisdiction's laws.
 
-### Supported Jurisdictions
-- **General / Not Specified** (Default)
-  - Displays a warning badge: *"Responses may not reflect jurisdiction-specific legal requirements."*
-- **California Law**
-- **New York Law**
-- **Delaware Corporate Law**
-- **Indian Contract Act**
-- **United Kingdom Law**
-- **European Union Law**
-
 ### How Jurisdiction Affects AI Responses
 When a jurisdiction is selected, the system dynamically prepends a specialized legal instruction to the prompt:
 > *"You are an expert legal assistant. Analyze all legal questions and uploaded documents strictly according to the laws and regulations of: {selectedJurisdiction}. If legal conclusions depend on jurisdiction-specific rules: Explicitly mention them. Flag potentially unenforceable clauses. Explain why the clause may be invalid in this jurisdiction. State when legal outcomes differ across jurisdictions. Do not assume laws from any other jurisdiction unless comparing them."*
