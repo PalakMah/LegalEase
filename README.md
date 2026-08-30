@@ -8,19 +8,6 @@
   AI-powered legal document analysis platform that simplifies complex legal documents, provides intelligent summaries, and offers chatbot-based assistance.
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/AnuranjanJain/LegalEase?style=for-the-badge" />
-  <img src="https://img.shields.io/github/forks/AnuranjanJain/LegalEase?style=for-the-badge" />
-  <img src="https://img.shields.io/github/issues/AnuranjanJain/LegalEase?style=for-the-badge" />
-  <img src="https://img.shields.io/github/license/AnuranjanJain/LegalEase?style=for-the-badge" />
-</p>
-
-<p align="center">
-  <a href="https://github.com/AnuranjanJain/LegalEase" target="_blank">
-    <img src="https://img.shields.io/badge/⭐_Star_this_Repo-black?style=for-the-badge&logo=github" alt="Star the Repo" />
-  </a>
-</p>
-
 ## 🎯 Why LegalEase?
 
 Legal documents are often difficult for ordinary users to understand because of legal jargon and lengthy clauses.
@@ -55,12 +42,7 @@ LegalEase helps users by:
 # LegalEase Website
 
 A comprehensive legal document analysis platform that combines AI-powered document processing, chatbot assistance, and user-friendly interfaces.
-## 🌐 Live Demo
 
-Check out the live project here:  
-👉 [visit Live Demo](https://legal-ease-silk.vercel.app)
-
-Explore the LegalEase platform to upload documents,view summaries,and interact with the AI chatbot interface.
 
 ## 📸 Screenshots
 
