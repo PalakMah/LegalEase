@@ -18,27 +18,41 @@ interface DemoClause {
 const DEMO_CLAUSES: Readonly<Record<'term' | 'indem' | 'ip', DemoClause>> = Object.freeze({
   term: {
     title: "Termination Clause",
-    original: "This Agreement may be terminated by either party upon thirty (30) days prior written notice; provided, however, that Company may terminate this Agreement immediately without notice or penalty in the event of any breach of confidentiality by Contractor.",
-    aiAnalysis: "UNBALANCED RISK: The immediate termination option without notice or penalty is highly unilateral and only benefits the Company. Contractor is not granted reciprocal rights.",
-    risk: "High Risk",
-    riskColor: "text-red-650 bg-red-500/10 border-red-500/20 dark:text-red-500",
-    remediation: "Negotiate a reciprocal 7-day cure period for any breach of confidentiality before immediate termination can take place."
+    original:
+      "Either party may terminate this Agreement upon thirty (30) days' written notice. The Company may terminate immediately if the Contractor materially breaches any confidentiality or data protection obligation.",
+    aiAnalysis:
+      "TERMINATION RISK: The Company has broader termination rights than the Contractor, creating an imbalance that may leave the Contractor with limited protection.",
+    risk: "Medium Risk",
+    riskColor:
+      "text-amber-650 bg-amber-500/10 border-amber-500/20 dark:text-amber-500",
+    remediation:
+      "Add reciprocal termination rights and allow a reasonable cure period before termination for remediable breaches."
   },
+
   indem: {
     title: "Indemnification Clause",
-    original: "Contractor agrees to defend, indemnify, and hold harmless the Company and its affiliates from and against any and all claims, liabilities, losses, damages, costs, and expenses (including reasonable attorneys' fees) arising out of or related to Contractor's performance of services.",
-    aiAnalysis: "BROAD LIABILITY: The clause covers 'any and all claims' arising out of performance, regardless of fault or negligence by the Contractor.",
-    risk: "Medium Risk",
-    riskColor: "text-amber-650 bg-amber-500/10 border-amber-500/20 dark:text-amber-500",
-    remediation: "Limit indemnification solely to third-party claims arising directly from the Contractor's gross negligence or willful misconduct."
+    original:
+      "The Contractor shall indemnify and hold harmless the Company from claims, losses, damages, and expenses arising from the Contractor's services, including reasonable legal fees.",
+    aiAnalysis:
+      "LIABILITY RISK: The indemnification obligation is broad and does not clearly limit liability to losses caused by the Contractor's negligence or misconduct.",
+    risk: "High Risk",
+    riskColor:
+      "text-red-650 bg-red-500/10 border-red-500/20 dark:text-red-500",
+    remediation:
+      "Limit indemnification to third-party claims caused by the Contractor's negligence, willful misconduct, or material breach of the Agreement."
   },
+
   ip: {
     title: "Intellectual Property Clause",
-    original: "All deliverables, materials, inventions, and work product developed or prepared by Contractor in the performance of services under this Agreement shall belong solely and exclusively to the Company, and Contractor hereby assigns all intellectual property rights therein.",
-    aiAnalysis: "FULL TRANSFER: Complete transfer of all developed work. Pre-existing materials are not explicitly carved out.",
+    original:
+      "All intellectual property created specifically for the Company under this Agreement shall be owned by the Company upon payment in full. Contractor retains ownership of pre-existing materials, tools, and know-how.",
+    aiAnalysis:
+      "IP REVIEW: The clause clearly distinguishes newly created work from the Contractor's pre-existing intellectual property, reducing the risk of unintended IP transfer.",
     risk: "Low Risk",
-    riskColor: "text-blue-650 bg-blue-500/10 border-blue-500/20 dark:text-blue-500",
-    remediation: "Add a clear 'Pre-Existing IP' clause to protect and exclude your proprietary background libraries or tools from automatic assignment."
+    riskColor:
+      "text-blue-650 bg-blue-500/10 border-blue-500/20 dark:text-blue-500",
+    remediation:
+      "Confirm that the agreement separately identifies any pre-existing IP and specifies the license granted to the Company where necessary."
   }
 });
 
@@ -131,25 +145,25 @@ export function HomePage() {
               {/* Feature Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-600/10 dark:bg-primary-500/10 border border-primary-600/20 dark:border-primary-500/30 text-primary-750 dark:text-primary-300 text-xs font-semibold mb-6 hover:bg-primary-600/20 dark:hover:bg-primary-500/20 transition-all duration-300">
                 <Zap size={12} className="text-primary-600 dark:text-primary-400" />
-                <span>Next-Gen Legal AI Assistant</span>
+                <span>AI-Powered Legal Document Analysis</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight text-gray-900 dark:text-white dark:bg-gradient-to-r dark:from-white dark:via-gray-100 dark:to-blue-200 dark:bg-clip-text dark:text-transparent">
-                Simplify Complex <span className="bg-gradient-to-r from-blue-600 to-emerald-600 dark:from-blue-400 dark:to-emerald-400 bg-clip-text text-transparent">Legal Documents</span> In Seconds
+              Understand Your <span className="bg-gradient-to-r from-blue-600 to-emerald-600 dark:from-blue-400 dark:to-emerald-400 bg-clip-text text-transparent">Legal Documents</span> In Seconds
               </h1>
 
               <p className="text-lg text-gray-650 dark:text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Stop drowning in complex legal jargon. Instantly upload agreements, NDA contracts, and leases to audit liabilities, identify high-risk clauses, and generate plain-English summaries instantly.
+              Upload contracts, NDAs, and legal documents to uncover risks, understand complex clauses, and get clear, plain-English insights in seconds.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
                 <NavLink to="/documents" className={btnPrimary}>
-                  Get Started Free
+                  Analyze a Document
                   <ArrowRight className="ml-2 h-5 w-5 animate-pulse" />
                 </NavLink>
                 <NavLink to="/chatbot" className={btnSecondary}>
                   <MessageSquare size={18} className="mr-2 text-primary-600 dark:text-primary-400" />
-                  Try Live Chatbot
+                  Ask Legal AI
                 </NavLink>
               </div>
 
@@ -274,10 +288,10 @@ export function HomePage() {
         <div className="app-container">
           <div className="text-center mb-16">
             <span className="text-xs font-extrabold uppercase tracking-widest text-primary-600 dark:text-primary-400 block mb-3">
-              How It Works
+              How LegalEase Works
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
-              Legal Help In Four Clear Steps
+              Analyze Your Legal Documents In Four Steps
             </h2>
             <div className="h-1.5 w-20 bg-primary-600 mx-auto rounded-full mb-6"></div>
             <p className="text-gray-650 dark:text-gray-450 max-w-2xl mx-auto text-base">
@@ -350,11 +364,11 @@ export function HomePage() {
         <div className="app-container">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
-              Advanced Tools Built For Smart Teams
+              Powerful AI Tools For Legal Documents
             </h2>
             <div className="h-1.5 w-20 bg-primary-600 mx-auto rounded-full mb-6"></div>
             <p className="text-gray-650 dark:text-gray-450 max-w-2xl mx-auto text-base">
-              Say goodbye to manual document parsing and high legal auditing consulting bills. Our suite of AI algorithms reviews your files instantly.
+              Analyze contracts, identify potential risks, understand complex clauses, and interact with your documents using AI-powered tools.
             </p>
           </div>
 
