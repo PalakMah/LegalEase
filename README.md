@@ -4,6 +4,9 @@
 <p align="center">
   AI-powered legal document analysis platform that simplifies complex legal documents, provides intelligent summaries, and offers chatbot-based assistance.
 </p>
+## 🎥 Demo
+
+[▶️ Watch the LegalEase Demo](https://drive.google.com/file/d/1zMrWVhCsbolH060KOvx9M3mFUDJtHxz5/view?usp=sharing)
 
 ## 🎯 Why LegalEase?
 
